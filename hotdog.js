@@ -11,6 +11,7 @@ const toppings = [
   ];
 
 export const renderToppings = () => {
+    document.body.innerHTML = ""
     toppings.forEach((topping, i) => {
         document.body.innerHTML += `
         <div class="topping" id="i${i}">
@@ -24,6 +25,7 @@ export const renderToppings = () => {
             document.querySelector(`#i${i}`).classList.remove("topping--selected")
         }
     })
+
     document.querySelectorAll(".topping").forEach((topping, i) => {
         topping.addEventListener("click", () => {
             toggleTopping(i)
