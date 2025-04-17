@@ -25,7 +25,6 @@ export const renderToppings = () => {
             document.querySelector(`#i${i}`).classList.remove("topping--selected")
         }
     })
-
     document.querySelectorAll(".topping").forEach((topping, i) => {
         topping.addEventListener("click", () => {
             toggleTopping(i)
